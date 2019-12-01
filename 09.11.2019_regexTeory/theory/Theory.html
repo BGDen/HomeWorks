@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ru-UA">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content=" ">
+	<meta name="description" content="Step Dnipro HomeWork Web Course">
+	<title>DZ</title>
+	<style>
+		body {
+			padding: 15px 20px;
+			font-family: sans-serif;
+		}
+		section {
+			margin: 15px;
+			border-left: 15px solid #d5deed;
+			padding-left: 25px;
+		}
+		code {
+			font-size: 150%;
+		}
+		main {
+			width: 800px;
+			margin: 0 auto;
+		}
+		h1 {
+			animation: jingle 5s ease infinite alternate;
+		}
+		.bl {
+			color: rgb(19, 74, 177);
+		}
+		.rd {
+			color: crimson;
+		}
+		.lrd {
+			color: rgb(255, 46, 46);
+		}
+		.or {
+			color: rgb(255, 123, 0);
+		}
+		.yl {
+			color: rgb(233, 217, 0);
+		}
+		.gr {
+			color: rgb(5, 184, 5);
+		}
+    .dgr{
+			color: rgb(0, 94, 0);
+		}
+		.lgr {
+			color: rgba(38, 192, 0, 0.712);
+		}
+		.pr {
+			color: rgb(240, 16, 202);
+		}
+		.lbl {
+			color: rgb(0, 153, 255);
+		}
+		.rnd {
+			border-radius: 7px;
+			outline: none;
+			padding: 0 3px;
+		}
+		.vd {
+			border: 1px solid red;
+			border-radius: 15px;
+			outline: none;
+		}
+		.au {
+			border: 1px solid black;
+			border-radius: 20px;
+			height: 25px;
+			outline: none;
+		}
+		.bck {
+			background-color: rgb(241, 241, 241);
+			padding: 5px 10px 0 15px;
+		}
+		.marg_0{
+			margin-left: 10px;
+		}
+		.marg_1 {
+			margin-left: 20px;
+		}
+		.marg_2 {
+			margin-left: 35px;
+		}
+		.marg_3 {
+			margin-left: 50px;
+		}
+		.marg_4 {
+			margin-left: 180px;
+		}
+		.marg_5 {
+			margin-left: 80px;
+		}
+		.mrtop{
+			display: inline-block;
+			margin-top: 5px;
+		}
+		.mrbot{
+			display: inline-block;
+			margin-bottom: 10px;
+		}
+		.pad_bot{
+			display: inline-block;
+			padding-bottom: 3px;
+		}
+		.pad_top{
+			display: inline-block;
+			padding-top: 2px;
+		}
+		.marg_lft{
+			margin-left: 4.5%;
+		}
+		.marg_lft1{
+			margin-left: 27%;
+		}
+		.marg_lft2{
+			margin-left: 24%;
+		}
+		.marg_lft3{
+			margin-left: 19%;
+		}
+		.marg_lft4{
+			margin-left: 23%;
+		}
+		.marg_lft5{
+			margin-left: 14%;
+		}
+		.curl{
+			padding: 2px 5px;
+			background-color:rgba(0, 209, 10, 0.418);
+			border-radius: 10px;
+		}
+		.blueline{
+			border-bottom: 2px solid rgba(0, 119, 255, 0.719);
+		}
+		.redline{
+			border-bottom: 2px solid rgba(252, 93, 154, 0.719);
+		}
+		.greenline{
+			border-bottom: 2px solid rgb(0, 189, 31);
+		}
+		.regexp{
+			display: block;
+			width: 480px;
+			height: 320px;
+			margin:  0 auto;
+			background: url(png/RegEx-lovehate.webp) no-repeat center;
+		}
+		.flag{
+			width: 20px;
+			height: 18px;
+			display: inline-flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			align-content: center;
+			background-color:black;
+			color:white;
+			/* padding-bottom: 3px; */
+			/* margin-left: 25px; */
+			margin-bottom: -4px;
+			border-radius: 30%;
+		}
+	</style>
+</head>
+
+<body>
+	<main>
+		<h1>Домашнее задание.</h1>
+<!--/////////////////////////////////////////////////////////////////////////////-->
+		<section>
+			<h3>1</h3>
+			<p>Опишите работу трех основных флагов в регулярных выражениях.</p>
+		</section>
+		<section class="bck">
+			<h3>Ответ:</h3>
+			<p><em class="bl"><strong>Флаги</strong></em> регулярных выражений задают высокоуровневые правила
+				соответствия <em>шаблонам</em>.	В отличие от остальной грамматики регулярных выражений,
+				<em class="bl">флаги</em> указываются не между символами <em>слэша</em>, а после второго из них.
+				В языке <span class="rd"><ins>JavaScript</ins></span>	поддерживается три
+				<span class="greenline">основных</span>	флага	и три <span class="blueline">типичных</span>:
+
+				<ul><span class="greenline mrbot">Основные</span> :
+					<li>
+							<span class="flag pad_bot">g</span> - указывает, что поиск должен быть <em><ins>глобальным</ins></em>,
+							т.е. должны быть найдены все <span class="marg_2">соответствия с шаблоном поиска,
+							без него – только первое.</span>
+					</li>
+					<li>
+							<span class="flag pad_top">i</span> - указывает, что поиск по шаблону должен быть <em><ins>нечувствителен</ins></em>
+							к регистру символов, <span class="marg_2">нет разницы между <strong class="rd">A</strong> и
+							<strong class="rd">a</strong> .</span>
+					</li>
+					<li>
+							<span class="flag pad_top pad_bot">m</span> - выполняет поиск по шаблону в многострочном режиме. Если строковое выражение,
+							<span class="marg_2">в котором выполняется поиск, содержит символы перевода строк, то в этом режиме</span>
+							<span class="marg_2">якорные символы <strong class="rd">^</strong> и <strong class="rd">$</strong>, помимо того, что они соответствуют началу и концу всего</span>
+							<span class="marg_2">строкового выражения,	также соответствуют началу и концу каждой текстовой строки.</span>
+					</li>
+				</ul>
+
+        <code class="curl marg_5">
+					 <span class="bl">let</span>  re = /"([^"]*)"/<span class="rd">g</span> ;
+				</code>
+
+				<ul><span class="blueline mrbot">Типичные</span> :
+					<li>
+							<span class="flag">u</span> - включает полную поддержку <em><ins>юникода</ins></em>,
+							разрешает корректную обработку суррогатных
+							<span class="marg_2">пар (добавлено в <span class="pr">ES6/ES2015</span>) .</span>
+					</li>
+					<li>
+							<span class="flag">s</span> - текст трактуется как одна строка, в этом случае метасимволу
+							<strong class="rd">.</strong>
+							(точка) соответствует	<span class="marg_2">любой одиночный символ, включая символ новой строки
+							(новое в <span class="pr">ES2018</span>) .</span>
+					</li>
+					<li>
+							<span class="flag pad_bot">y</span> - выполняет поиск начиная с символа, который находится на
+							позиции <strong class="dgr">lastIndex</strong> и <span class="redline">только</span>
+							<span class="marg_2">в <strong class="dgr">lastIndex</strong> (не ранее или позже в строке) .</span>
+					</li>
+				</ul>
+
+				<em class="bl"><strong>Флаги</strong></em> можно комбинировать :
+				<code class="curl marg_1">
+						<span class="bl">let</span>  re =	/^[ \s]+|[ \s]+$/<span class="rd">gi</span> ;
+				</code>
+				
+			</p>
+			<br>
+		</section>
+<!--/////////////////////////////////////////////////////////////////////////////-->
+<section>
+			<h3>2</h3>
+			<p>В чем отличие классов \w \W \s \S \d \D друг от друга?</p>
+		</section>
+		<section class="bck">
+			<h3>Ответ:</h3>
+			<p><em><ins>Символьный класс</ins></em> – это специальное обозначение,
+				которое соответствует любому символу из определённого набора.<br>
+				У классов <strong class="bl">\</strong><strong class="rd">d</strong>,
+				<strong class="bl">\</strong><strong class="rd">w</strong> и 
+				<strong class="bl">\</strong><strong class="rd">s</strong> есть отрицания –
+				<strong class="bl">\</strong><strong class="rd">D</strong>,
+				<strong class="bl">\</strong><strong class="rd">W</strong> и 
+				<strong class="bl">\</strong><strong class="rd">S</strong> соответственно.<br>
+				<ins><em class="rd">Например</em></ins> <strong>,</strong> оператор <strong class="bl">\</strong><strong class="rd">D</strong>
+				будет искать соответствия противоположенные <strong class="bl">\</strong><strong class="rd">d</strong>.<br><br>
+
+				<span class="flag pad_bot pad_top">\s</span> - совпадает с любым пробельным символом: пробел,
+				табуляция, символ новой строки и <span class="marg_2">пробелы <strong class="dgr">Unicode</strong></span><br>
+				<span class="flag pad_top">\S</span> - совпадает с любым символом, который не является пробелом<br><br>
+
+				<span class="flag pad_bot pad_top">\d</span> - совпадает с любым числом, эквивалентно 
+				<strong class="dgr">[0-9]</strong><br>
+				<span class="flag pad_top">\D</span> - совпадает с любым символом, который не является числом,
+				эквивалентно <strong class="dgr">[^0-9]</strong><br><br>
+
+				<span class="flag pad_bot pad_top">\w</span> - совпадает с любым буквенно-числовым символом,
+				эквивалентно <strong class="dgr">[A-Za-z0-9]</strong><br>
+				<span class="flag pad_top">\W</span> - совпадает с любым символом, который не является
+				буквенно-числовым значением, <span class="marg_2">эквивалентно <strong class="dgr">[^A-Za-z0-9]</strong></span><br><br>
+
+				Эти <span class="rd">полезные классы</span> используются для быстрого решения наиболее распространенных
+				задач <em>веб</em>-разработки.
+
+			</p>
+			<br>
+		</section>
+<!--/////////////////////////////////////////////////////////////////////////////-->
+<section>
+			<h3>3</h3>
+			<p>Что такое квантификаторы в регулярных выражениях?</p>
+		</section>
+		<section class="bck">
+			<h3>Ответ:</h3>
+			<p><strong class="bl">Квантификаторы</strong> - это <em>метасимволы</em> позволяющие задать количество
+				повторений символа или группы	символов в строке.<br><br>
+
+				Доступны нам следующие <em class="bl">квантификаторы</em>:<br><br>
+
+				<strong class="rd">*</strong> — любое кол-во вхождений предшествующего символа
+				<strong class="dgr marg_lft1">/^\d<strong class="rd">*</strong>$/</strong> ;<br>
+				<strong class="rd">+</strong> — одно или более вхождений предшествующего символа
+				<strong class="dgr marg_lft2">/^\d<strong class="rd">+</strong>$/</strong> ;<br>
+				<strong class="rd">?</strong> — указывает на необязательность предшествующего символа
+				<strong class="dgr marg_lft3">/^\d<strong class="rd">?</strong>$/</strong> ;<br>
+				{<strong class="rd">n</strong>} — точное кол-во вхождений предшествующего символа
+				<strong class="dgr marg_lft4">/^\d{3}$/</strong> ;<br>
+				{<strong class="rd">n</strong>, } — минимальное кол-во вхождений предшествующего символа
+				<strong class="dgr marg_lft5">/^\d{3,}$/</strong> ;<br>
+				{<strong class="rd">n</strong>, <strong class="rd">m</strong>} — возможно кол-во вхождений предшествующего
+				символа от <strong class="or">n</strong> до <strong class="or">m</strong>  <strong class="dgr marg_lft">/^\d{3,5}$/</strong> ;<br>
+				<ins class="mrtop">Используя их, мы можем очень гибко валидировать входящие данные.</ins><br><br>
+
+				<em class="bl">Квантификаторы</em> ( <strong class="rd">* + {}</strong>) – это
+				<em class="rd">«<strong class="rd">жадные</strong>»</em>
+				операторы, потому что они	продолжают поиск соответствий, как можно глубже – через весь текст.<br>
+				В <em class="rd">«<strong class="rd">жадном</strong>»</em> режиме (по умолчанию) квантификатор повторяется столько раз,
+				<ins>сколько это возможно</ins>.<br>
+				<code class="curl mrtop">
+						<span class="bl">let</span> regexp = /".<span class="rd">+</span>"/g;
+				</code><br><br>
+
+				<em class="dgr">«<strong class="dgr">Ленивый</strong>»</em> режим означает – повторять квантификатор <ins>наименьшее</ins>
+				количество раз.<br>
+				Обычно знак вопроса <strong class="rd">?</strong> сам по себе является <em class="bl">квантификатором</em>,
+				но, если он добавлен после другого <em class="bl">квантификтора</em> (или даже после самого себя),
+				он получает<br>другое значение – меняет режим совпадения с <em class="rd">жадного</em> на 
+				<em class="dgr">ленивый</em>.<br>
+				<code class="curl mrtop">
+						<span class="bl">let</span> regexp = /".+<span class="rd">?</span>"/g;
+				</code>
+			</p>
+			<br>
+		</section>
+<!--/////////////////////////////////////////////////////////////////////////////-->
+<section>
+			<h3>4</h3>
+			<p>Что такое группировка и обратные ссылки в регулярных выражениях?</p>
+		</section>
+		<section class="bck">
+			<h3>Ответ:</h3>
+			<p>Круглые скобки <strong class="rd">()</strong> имеют в регулярных выражениях несколько значений.<br>
+				Одно из них – <em class="bl">группировка</em> отдельных элементов в одно подвыражение (<em>захватываемоя
+				<strong class="dgr">группа</strong></em>),
+				так что элементы при использовании специальных символов <strong><span class="rd">|</span>, 
+				<span class="rd">*</span>, <span class="rd">+</span>, <span class="rd">?</span></strong> и других,
+				рассматриваются	как одно целое.<br>
+				<ins><em class="rd">Например</em></ins> <strong>,</strong> шаблон<br>
+
+				<code class="curl">
+					/(ab|cd)+|ef)/
+				</code>
+			  </strong> &nbsp; соответствует либо строке
+				<strong>«<span class="bl">ef</span>»</strong>,	либо одному или более	повторений одной из строк 
+				<strong>«<span class="bl">ab</span>»</strong> или <strong>«<span class="bl">cd</span>»</strong>.<br><br>
+
+				<em class="bl">Обратные ссылки</em> предоставляют удобный способ идентификации повторяющегося
+				символа или подстроки в строке.<br>
+				Если входная строка содержит несколько экземпляров произвольной подстроки,
+				можно найти первое вхождение с помощью <em class="dgr"><strong>группы</strong></em> записи,
+				а затем использовать <em class="bl">обратную ссылку</em> для поиска последующих вхождений подстроки.<br>
+				<em class="bl">Обратная ссылка</em> – <strong><span class="bl">\</span><span class="rd">n</span></strong>
+				где <strong>n</strong> – это порядковое положение <em>захватываемой <strong class="dgr">группы</strong></em>
+				в регулярном выражении.<br>
+				<ins><em class="rd">Например</em></ins> <strong>,</strong> в регулярном выражении &nbsp; <strong class="dgr">/(<span class="or">one</span>(<span class="or">two</span>)
+				(<span class="or">three</span>))(<span class="or">four</span>)\<span class="rd">1</span>/</strong><br>
+				<strong><span class="bl">\</span><span class="rd">1</span></strong> ссылается на <strong>«<span class="or">one</span>»</strong>,<br>
+				<strong><span class="bl">\</span><span class="rd">2</span></strong> на <strong>«<span class="or">two</span>»</strong>,<br>
+				<strong><span class="bl">\</span><span class="rd">3</span></strong> на <strong>«<span class="or">three</span>»</strong>,<br>
+				<strong><span class="bl">\</span><span class="rd">4</span></strong> на <strong>«<span class="or">four</span>»</strong>.
+			</p>
+			<br>
+		</section>
+<!--/////////////////////////////////////////////////////////////////////////////-->
+<section>
+			<h3>5</h3>
+			<p>Опишите методы строк, которые используют регулярные выражения.</p>
+		</section>
+		<section class="bck">
+			<h3>Ответ:</h3>
+			<p><strong class="dgr"><em>Строки</em></strong> поддерживают <em>четыре метода</em>, использующие регулярные выражения.<br>
+				Простейший из них - <em><strong>метод</strong></em> <strong><span class="pr">search</span><span class="rd">()</span></strong>.
+				Он принимает в качестве аргумента регулярное
+				выражение и возвращает либо <em class="blueline">позицию первого символа</em> найденной подстроки,
+				либо <strong>-1</strong>,	если соответствие не найдено.<br>
+				<ins><em class="rd">Например</em></ins> <strong>,</strong> следующий вызов вернет <strong>4 :</strong><br>
+
+				<code class="curl mrtop">
+						<span class="bl">let</span> re = "JavaScript".search(/script/<span class="rd">i</span>);
+				</code> <strong><span class="dgr marg_3">//</span> <span class="rd">4</span></strong><br><br>
+
+				<em><strong>Mетод</strong></em> <strong><span class="pr">replace</span><span class="rd">()</span></strong>
+				выполняет	<em>операцию <span class="bl">поиска</span> с <span class="bl">заменой</span></em>.
+				Он принимает в качестве первого аргумента <em class="bl">регулярное выражение</em>,
+				а в качестве второго - <em class="bl">строку замены</em>. Метод отыскивает в строке,
+				для которой он вызван, <em><ins>соответствие указанному шаблону</ins></em>.<br>
+				Следующий пример использует метод <strong><span class="pr">replace</span><span class="rd">()</span></strong>,
+				чтобы поменять местами слова (символы) в строке. Для замены текста скрипт использует обозначения 
+				<strong><span class="bl">$</span><span class="rd">1</span></strong> и
+				<strong><span class="bl">$</span><span class="rd">2</span></strong>
+				для обозначения первого и второго совпадения <em>скобочного выражения</em>.<br>
+				<ins><em class="rd">Например</em></ins> <strong>:</strong><br>
+				
+				<code class="curl mrtop">
+						<span class="bl">let</span> re = "John Smith".replace(/(\w+)\s(\w+)/,
+						"<strong><span class="bl">$</span><span class="rd">1</span></strong>,
+						<strong><span class="bl">$</span><span class="rd">2</span></strong>");
+				</code> &nbsp; <strong><span class="dgr">//</span> <span class="rd">Smith John</span></strong><br><br>
+
+				<em><strong>Mетод</strong></em> <strong><span class="pr">match</span><span class="rd">()</span></strong>
+				- он принимает в качестве единственного аргумента <em class="bl">регулярное выражение</em>
+				и возвращает <em class="bl">массив</em>, содержащий результаты поиска.<br>
+				Если в <em>регулярном выражении</em>
+				установлен <em>флаг</em> <strong class="rd">g</strong>,
+				метод возвращает <span class="redline">массив всех соответствий</span>, присутствующих в <em class="dgr">строке</em>.<br>
+				<ins><em class="rd">Например</em></ins> <strong>:</strong><br>
+
+        <code class="curl mrtop">
+						<span class="bl">let</span> re = "1 плюс 2 равно 3".match(/\d+/<span class="rd">g</span>);
+				</code> <strong><span class="dgr marg_3">//</span> <span class="rd">["<span class="bl">1</span>",
+					"<span class="bl">2</span>", "<span class="bl">3</span>"]</span></strong><br><br>
+
+				<em><strong>Mетод</strong></em> <strong><span class="pr">split</span><span class="rd">()</span></strong>
+				- разбивает строку, для которой он вызван, на <em class="bl">массив подстрок</em>, используя аргумент
+				в качестве разделителя.<br>
+				<ins><em class="rd">Например</em></ins> <strong>:</strong><br>
+
+				<code class="curl mrtop">
+						<span class="bl">let</span> result = "12, 34, 56".split(/,\s*/);
+				</code> <strong><span class="dgr marg_3">//</span> <span class="rd">[<span class="bl">12</span>,
+					<span class="bl">34</span>, <span class="bl">56</span>]</span></strong>
+
+			</p>
+			<br>
+		</section>
+<!--/////////////////////////////////////////////////////////////////////////////-->
+<section>
+			<h3>6</h3>
+			<p>Опишите методы самих регулярных выражений на совпадение и поиск данных в строке.</p>
+	</section>
+	<section class="bck">
+		<h3>Ответ:</h3>
+		<p><em><strong>Mетод</strong></em> <strong><span class="pr">regexp<span class="bl">.test</span></span><span class="rd">(<span class="dgr">str</span>)</span></strong>
+			ищет совпадение и возвращает <em>логическое (<span class="bl">boolean</span>)</em><br>
+			значение <strong><span class="rd">true</span> / <span class="rd">false</span></strong>,
+			в зависимости от того, <em><ins>находит ли он его</ins></em>.<br>
+			<ins><em class="rd">Например</em></ins> <strong>:</strong><br>
+
+			<code class="curl mrtop">
+					<span class="bl">let</span> result = /love/i.test("I love JavaScript");
+			</code> <strong><span class="dgr marg_2">//</span> <span class="rd">true</span></strong>
+			<code class="curl mrtop">
+					<span class="bl">let</span> result = /love/i.test("Bla-bla-bla");
+			</code> <strong><span class="dgr marg_5">//</span> <span class="rd">false</span></strong><br><br>
+
+			<em><strong>Mетод</strong></em> <strong><span class="pr">regexp<span class="bl">.exec</span></span><span class="rd">(<span class="dgr">str</span>)</span></strong>
+			проверяет, соответствует ли строка регулярному выражению,
+			возвращает ту <em>часть строки</em>, которая <em class="blueline">соответствует выражению</em>.
+			Если соответствий <em class="rd">нет</em>, то возвращается значение <strong class="bl">null</strong>.<br>
+			<ins><em class="rd">Например</em></ins> <strong>:</strong><br>
+			<code class="curl mrtop">
+					<span class="bl">let</span> result = /hello/.exec("hello world!");
+			</code> <strong><span class="dgr marg_5">//</span> <span class="dgr">hello</span></strong>
+			<code class="curl mrtop">
+				  <span class="bl">let</span> result = /hello/.exec("beautifull wheather");
+			</code> <strong><span class="dgr marg_2">//</span> <span class="bl">null</span></strong><br><br>
+
+			Также результатом является <em class="bl">массив подстрок</em>, соответствующих заданному образцу:<br>
+
+			<code class="curl mrtop">
+					<span class="bl">let</span> result = /(\d+).(\d+).(\d+)/.exec("Я родился 27.03.1217");<br>
+			</code>
+			<code class="curl mrtop">
+							console.log(result[<span class="bl">0</span>]);
+			</code> <strong><span class="dgr marg_3">//</span> <span class="rd">27.03.1217</span></strong><br>
+			<code class="curl mrtop">
+							console.log(result[<span class="bl">1</span>]);
+			</code> <strong><span class="dgr marg_3">//</span> <span class="rd">27</span></strong><br>
+			<code class="curl mrtop">
+							console.log(result[<span class="bl">2</span>]);
+			</code> <strong><span class="dgr marg_3">//</span> <span class="rd">03</span></strong><br>
+			<code class="curl mrtop">
+							console.log(result[<span class="bl">3</span>]);
+			</code> <strong><span class="dgr marg_3">//</span> <span class="rd">1217</span></strong>
+
+		</p>
+		<br>
+	</section>
+<!--/////////////////////////////////////////////////////////////////////////////-->
+
+<div class="regexp"></div>
+
+	
+	<h3>Формат работы</h3>
+		<ul>
+			<li>html файл</li>
+		</ul>
+	</main>
+</body>
+ 
+</html>

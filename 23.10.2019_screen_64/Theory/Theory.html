@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ru-UA">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content=" ">
+	<meta name="description" content="Step Dnipro HomeWork Web Course">
+	<title>DZ</title>
+	<style>
+		body {
+			padding: 15px 20px;
+			font-family: sans-serif;
+		}
+
+		section {
+			margin: 15px;
+			border-left: 15px solid #d5deed;
+			padding-left: 25px;
+		}
+
+		code {
+			font-size: 150%;
+		}
+
+		main {
+			width: 810px;
+			margin: 0 auto;
+		}
+
+		h1 {
+			animation: jingle 5s ease infinite alternate;
+		}
+
+		.bl {
+			color: rgb(19, 74, 177);
+		}
+
+		.rd {
+			color: crimson;
+		}
+
+		.lrd {
+			color: rgb(255, 46, 46);
+		}
+
+		.or {
+			color: rgb(255, 123, 0);
+		}
+
+		.yl {
+			color: rgb(233, 217, 0);
+		}
+
+		.gr {
+			color: rgb(0, 124, 0);
+		}
+    .dgr{
+			color: rgb(0, 94, 0);
+		}
+		.lgr {
+			color: rgba(38, 192, 0, 0.712);
+		}
+
+		.pr {
+			color: rgb(192, 2, 160);
+		}
+
+		.lbl {
+			color: rgb(0, 153, 255);
+		}
+
+		.rnd {
+			border-radius: 7px;
+			outline: none;
+			padding: 0 3px;
+
+		}
+		.vd {
+			border: 1px solid red;
+			border-radius: 15px;
+			outline: none;
+		}
+		.au {
+			border: 1px solid black;
+			border-radius: 20px;
+			height: 25px;
+			outline: none;
+		}
+		.bck {
+			background-color: rgb(241, 241, 241);
+			padding: 5px 10px 0 15px;
+		}
+		.marg_0{
+			margin-left: 10px;
+		}
+		.marg_1 {
+			margin-left: 20px;
+		}
+		.marg_2 {
+			margin-left: 35px;
+		}
+		.marg_3 {
+			margin-left: 50px;
+		}
+		.marg_4 {
+			margin-left: 180px;
+		}
+		.marg_5 {
+			margin-left: 80px;
+		}
+		.mrbot{
+			display: inline-block;
+			margin-bottom: 5px;
+		}
+		.curl{
+			background-color:rgba(41, 212, 255, 0.247);
+		}
+		.blueline{
+			border-bottom: 2px solid rgba(0, 119, 255, 0.719);
+		}
+		.redline{
+			border-bottom: 2px solid rgba(252, 93, 154, 0.719);
+		}
+		.greenline{
+			border-bottom: 2px solid rgb(0, 189, 31);
+		}
+    .talk{
+			display: inline-block;
+			width: 80%;
+			background-color:rgba(252, 160, 252, 0.432);
+			padding: 10px;
+		}
+		.block{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+		}
+	</style>
+</head>
+ 
+<body>
+	<main>
+		<h1>Домашнее задание.</h1>
+<!--/////////////////////////////////////////////////////////////////////////////-->
+		<section>
+			<h3>1</h3>
+			<p>В чем отличие LocalStorage от SessionStorage?</p>
+		</section>
+		<section class="bck">
+			<h3>Ответ:</h3>
+			<p><em>Авторам</em> при реализации некоторого функционала на веб-сайте иногда приходится
+				сохранять данные на устройстве пользователя (в локальном хранилище браузера) 
+				для того, чтобы потом к ним можно было обратиться.<br>
+				Например, браузерные игры, которые используют его как сохраненку, или записать момент,
+				на котором пользователь остановился при просмотре видео, различные данные для форм и т.д.
+				Реализовать эту возможность позволяют объекты <em class="bl">API HTML5</em>
+				<span class="rd marg_0">sessionStorage</span> и <span class="rd">localStorage</span>.<br><br>
+
+				Отличаются эти объекты друг от друга только тем, что имеют различный период времени
+				хранения данных, помещённых в них.<br>
+				Объект <em class="rd">sessionStorage</em> хранит данные
+				<span class="redline">ограниченное время</span>,	они удаляются сразу после того как пользователь
+				завершает свой сеанс или закрывает браузер.<br>
+				Объект <em class="rd">localStorage</em> в отличие от объекта
+				<em class="rd">sessionStorage</em> хранит данные <span class="greenline">неограниченное время</span>.
+
+			</p>
+			<br>
+		</section>
+<!--/////////////////////////////////////////////////////////////////////////////-->
+<section>
+			<h3>2</h3>
+			<p>Где на компьютере хранятся Cookie?</p>
+		</section>
+		<section class="bck">
+			<h3>Ответ:</h3>
+			<p><strong class="bl"><em>Cookies</em></strong> – небольшие файлы, в которых <em><ins>временно</ins></em> хранится информация,
+				используемая <em class="greenline">браузером</em>.
+				Сохранение данных производиться в отдельную папку, находящуюся на жестком диске компьютера:<br><br>
+
+				<code class="curl">
+						C:\Users\Admin\AppData\Local\Microsoft\Windows\INetCookies
+				</code><br><br>
+
+				<strong class="bl"><em>cookie</em></strong> не содержат в себе конфиденциальной информации,
+				касающейся пользователя, они необходимы только для правильной работы сайтов.<br> 
+				Как правило, <strong class="bl"><em>cookie</em></strong> хранятся на компьютере долгое время,
+				однако встречаются и те, которые удаляются в <ins>автоматическом</ins> режиме с компьютера
+				<ins>после</ins> выхода с сайта.
+				
+			</p>
+			<br>
+		</section>
+<!--/////////////////////////////////////////////////////////////////////////////-->
+<section>
+			<h3>3</h3>
+			<p>Зачем нужен шаблон SingleTone?</p>
+		</section>
+		<section class="bck">
+			<h3>Ответ:</h3>
+			<p><strong><em>pattern</em> Singleton</strong> (Одиночка) – порождающий (<em>creational</em>)
+				шаблон проектирования, гарантирующий что в однопоточном приложении будет <em><ins>единственный</ins></em>
+				экземпляр класса с глобальной точкой доступа.<br>
+				Напишем модуль, который будет хранить в себе счетчик и иметь 2 публичных метода<br>
+				<ins><span class="rd">getCounter</span></ins> и <ins><span class="rd">increaseCounter</span></ins>:<br><br>
+
+				<code class="curl">
+						let counterModule = (function () {<br>
+							let instance,<br>
+									counter = 0;<br>
+
+							let getCounter = function () {<br>
+								return counter;<br>
+							}<br>
+
+							let increaseCounter = function () {<br>
+								counter ++;<br>
+							}<br>
+
+							let createInstance = function () {<br>
+								return {<br>
+									getCounter: getCounter,<br>
+									increaseCounter: increaseCounter<br>
+								}<br>
+							}<br>
+
+							return {<br>
+								getInstance: function () {<br>
+									return instance || (instance = createInstance());<br>
+								}<br>
+							}<br>
+						})();<br><br>
+				</code>
+
+				<span class="mrbot"><em><ins>Чтобы было понятно</ins></em></span><strong> :</strong><br>
+
+				У нас есть модуль <em class="dgr"><strong>counterModule</strong></em><strong> ;</strong><br>
+				Внутри него у нас есть 2 переменных <em class="bl"><strong>counter</strong></em> и
+				<em class="bl"><strong>instance</strong></em><strong> ;</strong><br>
+				Каждый раз, когда мы будем вызывать <em class="rd"><strong>increaseCounter</strong></em>,
+				у нас будет увеличиваться наш счетчик<strong> ;</strong><br>
+				<em class="rd"><strong>getCounter</strong></em> мы используем для того, чтобы получить значение нашего
+				<em class="bl"><strong>counter</strong></em> сейчас<strong> ;</strong><br>
+				Функция <em class="pr"><strong>createInstance</strong></em> у нас вызывается в самый первый раз,
+				пока <em class="bl"><strong>instance</strong></em> еще не существует<strong> ;</strong><br>
+				Если же <em class="bl"><strong>instance</strong></em> у нас уже есть, то возвращается этот же
+				<em class="bl"><strong>instance</strong></em><strong> .</strong><br><br>
+
+				<em><ins>Примеры использования</ins></em><strong> :</strong>
+				<ul>
+					<li>Объект-дебаггер для отладки web-приложения</li>
+					<li>Объект сбора ошибок</li>
+					<li>Класс доступа к браузерным хранилищам и cookies</li>
+					<li>Реализация шаблона Реестр (Registry). Например реестр объектов,
+						  для контроля за используемыми	объектами на странице</li>
+					<li>Реализация паттерна Медиатор или Application controller</li>
+				</ul>
+			</p>
+			<br>
+		</section>
+<!--/////////////////////////////////////////////////////////////////////////////-->
+<section>
+			<h3>4</h3>
+			<p>Почему шаблоны проектирования разделяются на три категории?</p>
+		</section>
+		<section class="bck">
+			<h3>Ответ:</h3>
+			<p>Основные <ins><em class="bl">шаблоны проектирования</em></ins> (<em>design pattern</em>)
+				в разработке программного<br>
+				обеспечения – повторяемая	архитектурная конструкция, представляющая собой решение проблемы
+				проектирования в рамках	некоторого часто возникающего контекста.<br>
+				Таким образом, <ins><em class="bl">шаблоны</em></ins> охватывают собой архитектуру
+				<ins><strong>всей</strong> программной системы.</ins><br><br>
+
+				В сравнении с полностью самостоятельным проектированием, <ins><em class="bl">шаблоны</em></ins>
+				обладают рядом преимуществ.	Основная польза в снижении сложности разработки за счёт	готовых
+				абстракций для решения целого класса проблем.<br><br>
+
+				<ins><em class="bl">Шаблон</em></ins> даёт решению своё имя,	что облегчает коммуникацию между
+				разработчиками, позволяя ссылаться на известные шаблоны, <ins><em>делятся на три основные категории:</em></ins><br>
+				<span class="greenline">создающие</span> (<em>creational</em>), <span class="redline">структурные</span>
+				(<em>structural</em>) и <span class="blueline">поведенческие</span> (<em>behavioral</em>),
+				каждый из которых	имеет определенную роль.<br><br>
+
+				<em class="greenline">Создающие</em> шаблоны являются специфическими для решения проблем,<br>
+				связанных с созданием объекта.<br>
+				<em class="redline">Структурные</em> шаблоны касаются проектирования классов или объектов.<br>
+				<em class="blueline">Поведенческие</em>	шаблоны касаются связанных с проектированием объектов,
+				способом их взаимодействия или поддержки.<br><br>
+
+				Таким образом, за счёт <em class="bl">шаблонов</em> производится унификация деталей
+				решений: модулей, элементов проекта, – <ins>снижается количество ошибок.</ins><br>
+				<em class="rd">Правильно</em> сформулированный <em class="bl">шаблон</em>	проектирования позволяет,
+				отыскав удачное решение, пользоваться им снова и снова.<br>
+				Набор <em class="bl">шаблонов</em> помогает разработчику выбрать возможный, наиболее подходящий вариант проектирования.
+			</p>
+			<br>
+		</section>
+<!--/////////////////////////////////////////////////////////////////////////////-->
+<section>
+			<h3>5</h3>
+			<p>Когда и кто придумал MVC?</p>
+		</section>
+		<section class="bck">
+			<h3>Ответ:</h3>
+			<p>Шаблон проектирования <strong class="bl">MVC</strong> предполагает разделение данных приложения,
+				пользовательского интерфейса и управляющей логики на три отдельных компонента:<br>
+				<ins><em>Модель</em></ins> (<span class="rd"><strong>M</strong></span>odel), <ins><em>Представление</em></ins>
+				(<span class="rd"><strong>V</strong></span>iew)
+				и <ins><em>Контроллер</em></ins> (<span class="rd"><strong>C</strong></span>ontroller) – таким образом,
+				что модификация каждого компонента может осуществляться независимо.<br><br>
+
+				Создатель => Трюгве Миккель Хейердал Реенскауг - норвежский ученый-компьютерщик
+				и почетный профессор Университета Осло . Он сформулировал шаблон модель-вид-контроллер (MVC)
+				для разработки программного обеспечения с графическим интерфейсом пользователя (GUI) в 1979 году.<br><br>
+
+				Реенскауг описал свои ранние идеи Smalltalk и объектно-ориентированного
+				концептуального подхода следующим образом:<br>
+				
+				<div class="block">
+				<span class="talk">
+				<ins>MVC</ins> был задуман как общее решение проблемы пользователей, управляющих большим и сложным набором
+				данных.	Сложнее всего было найти хорошие имена для различных архитектурных компонентов.<br><br>
+				<strong>M</strong>odel-<strong>V</strong>iew-<strong>E</strong>ditor был первым набором.<br>
+				После долгих обсуждений, особенно с Адель Голдберг
+				(ученый-компьютерщик, который участвовал в разработке языка программирования Smalltalk - 80),
+				мы закончили с терминами <strong>M</strong>odel-<strong>V</strong>iew-<strong>C</strong>ontroller.
+				</span>
+				</div><br>
+				<ins>Образец MVC впоследствии развивался</ins>...(HMVC), (MVA), (MVP), (MVVM) и другие,
+				которые адаптировали MVC к различным контекстам.
+
+				
+			</p>
+			<br>
+		</section>
+<!--/////////////////////////////////////////////////////////////////////////////-->
+<section>
+			<h3>6</h3>
+			<p>Как работают get/set операторы в описании класса?</p>
+	</section>
+	<section class="bck">
+		<h3>Ответ:</h3>
+		<p><strong class="rd">Getter</strong> (получатель) - метод чтения,	позволяющий получить данные,
+			доступ к которым<br>напрямую ограничен.<br>
+			<strong class="rd">Setter</strong> (установщик) - метод установки, используемый чтобы присвоить
+			какое-либо значение.<br>
+			В классах, как и в обычных объектах, можно объявлять <em>геттеры</em> и <em>сеттеры</em>
+			 через <strong class="bl">get</strong><strong> / </strong><strong class="bl">set</strong><strong> :</strong><br><br>
+
+			<code class="curl">
+					class User {<br>
+						constructor(firstName, lastName) {<br>
+							this.firstName = firstName;<br>
+							this.lastName = lastName;<br>
+						}<br>
+			</code>
+      <code class="gr">
+						// геттер<br>
+			</code>
+			<code class="curl">
+						get fullName() {<br>
+							return `${this.firstName} ${this.lastName}`;<br>
+						}<br>
+			</code>
+			<code class="gr">
+						// сеттер<br>
+			</code>
+			<code class="curl">
+						set fullName(newValue) {<br>
+							[this.firstName, this.lastName] = newValue.split(' ');<br>
+						}<br>
+					};<br>
+
+					let user = new User("Coco", "Chanel");<br><br>
+					consol.log( user.fullName ); </code> <code class="gr marg_1">// Coco Chanel</code><br>
+      <code class="curl">
+					user.fullName = "Louis Vuitton";<br>
+					consol.log( user.fullName ); </code> <code class="gr marg_1">// Louis Vuitton</code><br>
+
+		</p>
+		<br>
+	</section>
+<!--/////////////////////////////////////////////////////////////////////////////-->
+	
+	<h3>Формат работы</h3>
+		<ul>
+			<li>html файл</li>
+		</ul>
+	</main>
+</body>
+
+</html>

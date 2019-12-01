@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ru-UA">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content=" ">
+	<meta name="description" content="Step Dnipro HomeWork Web Course">
+	<title>DZ</title>
+	<style>
+		
+		body {
+			padding: 15px 20px;
+			font-family: sans-serif;
+		}
+		section {
+			margin: 15px;
+			border-left: 15px solid #d5deed;
+			padding-left: 25px;
+		}
+		code {
+			font-size: 150%;
+		}
+		main {
+			width: 840px;
+			margin: 0 auto;
+		}
+		h1 {
+			animation: jingle 5s ease infinite alternate;
+		}
+		.bl {
+			color: rgb(19, 74, 177);
+		}
+		.rd {
+			color: crimson;
+		}
+		.lrd {
+			color: rgb(255, 46, 46);
+		}
+		.or {
+			color: rgb(255, 123, 0);
+		}
+		.yl {
+			color: rgb(233, 217, 0);
+		}
+		.gr {
+			color: rgb(0, 124, 0);
+		}
+		.lgr {
+			color: rgba(38, 192, 0, 0.712);
+		}
+		.pr {
+			color: rgb(240, 16, 202);
+		}
+		.lbl {
+			color: rgb(0, 153, 255);
+		}
+		.rnd {
+			border-radius: 7px;
+			outline: none;
+			padding: 0 3px;
+
+		}
+		.vd {
+			border: 1px solid red;
+			border-radius: 15px;
+			outline: none;
+		}
+		.au {
+			border: 1px solid black;
+			border-radius: 20px;
+			height: 25px;
+			outline: none;
+		}
+		.bck {
+			background-color: rgb(241, 241, 241);
+			padding: 5px 18px 0 15px;
+		}
+		.marg_0{
+			margin-left: 10px;
+		}
+		.marg_1 {
+			margin-left: 20px;
+		}
+		.marg_2 {
+			margin-left: 35px;
+		}
+		.marg_3 {
+			margin-left: 50px;
+		}
+		.marg_4 {
+			margin-left: 180px;
+		}
+		.marg_5 {
+			margin-left: 80px;
+		}
+		.curl{
+			background-color:rgba(255, 127, 80, 0.247);
+		}
+		.blueline{
+			border-bottom: 2px solid rgba(0, 119, 255, 0.719);
+		}
+		.redline{
+			border-bottom: 2px solid rgba(252, 93, 154, 0.719);
+		}
+		.greenline{
+			border-bottom: 2px solid rgb(0, 189, 31);
+		}
+		.comnt{
+			background-color: none;
+		}
+		.lit{
+			background-color: rgba(248, 248, 248, 0.774);
+		}
+		.valid{
+			border-top: 3px solid rgba(128, 128, 128, 0.274);
+			padding-top: 20px;
+		}
+		.reg_back{
+			position: relative;
+			z-index:1;
+			overflow:hidden;
+		}
+		.reg_back::before{
+			content: url(PNG/regex_t.png);
+			z-index:-1;
+			position:absolute;
+			left:0;
+			top:0;
+			opacity:0.4;
+		}
+		.test{
+			display: flex;
+			width: 70%;
+			padding: 10px;
+			border: 2px dashed rgb(0, 217, 255);
+			border-radius: 10px;
+		}
+		.countField{
+			width: 20px;
+			height: 20px;
+			display: inline-flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			align-content: center;
+			background-color:yellow;
+			margin-left: 25px;
+			margin-bottom: -4px;
+			border-radius: 30%;
+		}
+	</style>
+
+
+</head>
+
+<body>
+	<main>
+		<h1>Домашнее задание.</h1>
+<!--/////////////////////////////////////////////////////////////////////////////-->
+		<section>
+			<h3>1</h3>
+			<p>Что такое API и зачем он нужен?</p>
+		</section>
+		<section class="bck">
+			<h3>Ответ:</h3>
+			<p><strong>API</strong> - «<strong class="rd">A</strong>pplication <strong class="rd">P</strong>rogramming
+				 <strong class="rd">I</strong>nterface» (интерфейс программирования приложений,
+				 программный интерфейс приложения). Это готовый код, который упрощает жизнь программистам.
+				 Разработчик может использовать готовый код API, чтобы писать приложение.<br>
+				 API используется в качестве метода отправки команд и информации определенного формата
+				 с одних программ на другие.<br><br>
+				 <ins class="gr"><strong>Отправка</strong></ins> =<strong>></strong> <em>клиент обращается к тем или иным опциям сервера, а он выдает актуальную
+					 информацию либо корректирует конкретные настройки.</em><br>
+				 <ins class="gr"><strong>Получение</strong></ins> <strong><</strong>= <em>сервер предоставляет запрашиваемые сведения в конкретном формате (JSON).</em><br>
+				 <br>Некое приложение – например, <ins>Github</ins> – имеет свой API, которым могут воспользоваться другие
+				 разработчики. То, как они будут пользоваться им зависит от возможностей, которые предоставляет API и от
+				 того, насколько хорошо работает фантазия у разработчиков. <ins>API Github</ins> позволяет, например,
+				 получать информацию о <em class="bl">пользователе</em>, его <em class="bl">аватаре</em>,
+				 <em class="bl">читателях</em>, <em class="bl">репозиториях</em>
+				 и множество других полезных и интересных сведений.<br><br>
+
+				 <ins>Стандартный запрос</ins> данных от стороннего API выглядит примерно так:<br><br>
+				 <code class="curl">
+						<span class="bl">curl</span> https://api.github.com/users/Freika 
+				 </code><br><br>
+
+				 <ins>Ответом на запрос</ins> будет примерно такая информация:<br>
+         <code class="curl">
+						<br>{<br>
+							"login": "Freika",<br>
+							"id": 3738638,<br>
+							"avatar_url": "https://avatars.githubusercontent.com/u/3738638?v=3",<br>
+							"gravatar_id": "",<br>
+							"url": "https://api.github.com/users/Freika",<br>
+							"html_url": "https://github.com/Freika",<br>
+							"followers_url": "https://api.github.com/users/Freika/followers",<br>
+							"following_url": "https://api.github.com/users/Freika/following{/other_user}",<br>
+							"gists_url": "https://api.github.com/users/Freika/gists{/gist_id}",<br>
+							"starred_url": "https://api.github.com/users/Freika/starred{/owner}{/repo}",<br>
+							"subscriptions_url": "https://api.github.com/users/Freika/subscriptions",<br>
+							"organizations_url": "https://api.github.com/users/Freika/orgs",<br>
+							"repos_url": "https://api.github.com/users/Freika/repos",<br>
+							"events_url": "https://api.github.com/users/Freika/events{/privacy}",<br>
+							"received_events_url": "https://api.github.com/users/Freika/received_events",<br>
+							"type": "User",<br>
+							"site_admin": false,<br>
+							"name": "Evgeniy",<br>
+							"company": "",<br>
+							"blog": "http://frey.su/",<br>
+							"location": "Barnaul",<br>
+							"email": "",<br>
+							"hireable": true,<br>
+							"bio": null,<br>
+							"public_repos": 39,<br>
+							"public_gists": 13,<br>
+							"followers": 15,<br>
+							"following": 21,<br>
+							"created_at": "2013-03-01T13:48:52Z",<br>
+							"updated_at": "2014-12-15T13:55:03Z"<br>
+						}
+				 </code><br><br>
+				 Как видно из блока выше, ответ содержит <em class="bl">логин</em>, <em class="bl">аватар</em>,
+				 <em class="bl">ссылку на профиль</em> на сайте и в API, <em class="bl">статус пользователя</em>,
+				 <em class="bl">количество публичных репозиториев</em> и прочую полезную и интересную информацию.
+			</p>
+			<br>
+		</section>
+<!--/////////////////////////////////////////////////////////////////////////////-->
+<section>
+			<h3>2</h3>
+			<p>Зачем нужен pattern Observer?</p>
+		</section>
+		<section class="bck">
+			<h3>Ответ:</h3>
+			<p><strong>Pattern</strong> (<em class="blueline">шаблон</em>) - описание того, как в разработке
+				программного обеспечения, решить проблему, которая может возникнуть в различных ситуациях.<br>
+				<em><ins>Шаблоны проектирования</ins></em> — это принявшие устойчивую форму лучшие практики,
+				которые программист может	использовать для решения общих проблем при разработке приложения или
+				системы.<br><br>
+				Pattern <strong>Observer</strong> (<em class="blueline">Наблюдатель</em>) - является
+				поведенческим (<em class="redline">Behavioral</em>) и определяет, как объекты	соотносятся друг с другом.
+				Он позволяет делать связи <em class="greenline">'один ко многим'</em> между компонентами.
+				Паттерн Наблюдатель предлагает хранить внутри объекта издателя (<em class="redline">Publisher</em>)
+				список ссылок на объекты подписчиков (<em class="redline">Subscriber</em>), причём <em>издатель</em>
+				не должен вести список подписки самостоятельно.	Он предоставит методы, с помощью которых
+				<em>подписчики</em> могли бы добавлять или убирать себя из списка.
+			</p>
+			<br>
+		</section>
+<!--/////////////////////////////////////////////////////////////////////////////-->
+<section>
+			<h3>3</h3>
+			<p>Приведите пример Observer'а.</p>
+		</section>
+		<section class="bck">
+			<h3>Ответ:</h3>
+			<p><em><ins>Каждый день</ins></em>, при разработке, у нас возникает проблема, когда у нас есть разные
+				части приложения,	которые должны реагировать на разные события.	Например, пользователь ввел какой-то
+				текст,	и вам нужно	изменить несколько компонентов.	И, достаточно сложно, все это синхронизировать.<br>
+				В этом нам может помочь <em><strong class="redline">Observer pattern:</strong></em><br><br>
+
+				<code class="curl">
+						class EventObserver{<br>
+							constructor () {<br>
+								this.observers = []<br>
+							}<br>
+							subscribe (fn) {<br>
+								this.observers.push(fn)<br>
+							}<br>
+							unsubscribe (fn) {<br>
+								this.observers = this.observers.filter(subscriber => subscriber !== fn)<br>
+							}<br>
+							broadcast (data) {<br>
+								this.observers.forEach(subscriber => subscriber(data))<br>
+							}<br>
+						}<br><br>
+				</code>
+
+				Мы создали класс, в котором мы храним массив <em>подписчиков</em>. Также мы описали методы
+				<em class="bl">subscribe</em>, <em class="bl">unsubscribe</em> и <em class="bl">broadcast</em>.
+				Теперь давайте попробуем на реальном примере. Мы хотим написать 2 компонента:<br>
+				в одном мы будем <em class="greenline">вводить</em> данные, а другой будет
+				<em class="greenline">выводить</em> количество введенных слов. Для начала давайте 
+				добавим 2 элемента в нашу разметку:<br><br>
+
+				<code class="curl">
+						&lt;textarea class='textField'>&lt;/textarea><br>
+						<span class="marg_1">&lt;div>Words Count:</span><br>
+						<span class="marg_1">&lt;p class='countField'>&lt;/p></span><br>
+						&lt;/div><br><br>
+				</code>
+
+				Теперь давайте создадим новый <em class="redline"><strong>Observer</strong></em> и найдем наши 2 элемента:<br><br>
+				
+				<code class="curl">
+						const blogObserver = new EventObserver()<br>
+						const textField = document.querySelector('.textField')<br>
+						const countField = document.querySelector('.countField')<br>
+				</code><br>
+
+				Внутрь <em class="bl">.broadcast</em>, в качестве данных, мы передали значение поля:<br><br>
+
+				<code class="curl">
+					textField.addEventListener('keyup', () => {<br>
+						blogObserver.broadcast(textField.value)<br>
+					})<br><br>
+				</code>
+
+				Теперь мы хотим из текста найти количество слов, напишем дополнительную функцию для этого:<br><br>
+
+				<code class="curl">
+						const getWordsCount = text =><br>
+						text ? text.trim().split(/\s+/).length : 0<br><br>
+				</code>
+
+				И вызовем ее внутри <em class="bl">.subscribe</em>:<br><br>
+
+				<code class="curl">
+						blogObserver.subscribe(text => {<br>
+							countField.innerHTML = getWordsCount(text)<br>
+						})<br><br>
+				</code>
+
+				И теперь все наши компоненты <em class="greenline">синхронизированы</em> и изменяются одновременно,
+				при изменении данных.	И, хоть это маленький пример, он отлично показывает как работает
+				<em class="redline"><strong>Observer</strong></em> паттерн.<br>
+
+        <div class="test">
+						<ins class="rd marg_1"><strong>Пробуем:</strong></ins><br>
+						<textarea class='textField marg_1'></textarea>
+						<div class="marg_1">Words Count:<strong><span class='countField marg_1'></span></strong>
+						</div>
+				</div>
+
+			</p>
+			<br>
+		</section>
+<!--/////////////////////////////////////////////////////////////////////////////-->
+<section>
+			<h3>4</h3>
+			<p>Что такое Promise?</p>
+		</section>
+		<section class="bck">
+			<h3>Ответ:</h3>
+			<p>Если какая-то операция выполняется <em class="redline">долго</em>, то есть
+				<em class="blueline">асинхронно</em>, то ее нельзя просто написать
+				с помощью <em class="greenline">синхронного</em> кода в <ins>javascript</ins>.<br>
+				Поэтому для этого и используют <strong>Promises</strong> (<em>промисы</em>).
+				Самые частые примеры промисов это<br>
+				<span class="rd">&#10149;</span> <span class="bl">setTimeout</span>,	получение данных с сервера, запись в файл и другие...<br><br>
+
+				<code class="curl">
+						const promise = new Promise((resolve, reject) => {<br>
+							setTimeout(() => {<br>
+								if (true) {<br>
+									resolve('hello world')<br>
+								} else {<br>
+									reject()<br>
+								}<br>
+							}, 2000)<br>
+						})<br><br>
+				</code>
+				<code class="curl">
+						promise.then(data => console.log('success: ', data))<br>
+				</code>
+				<code>
+						<span class="gr">// success: hello world</span><br>
+				</code>
+				<code class="curl">
+						promise.catch(error => console.log('error: ', error))<br>
+				</code>
+				<code>
+						<span class="gr">// error: undefined</span><br><br>
+				</code>
+				Мы создали новый <em><ins>промис</ins></em> <span class="gr marg_0">&#10004;</span> <br>
+				Внутри него сделали асинхронную операцию (В нашем случае <span class="bl">setTimeout</span>)
+				<span class="gr marg_0">&#10004;</span> <br>
+				Вызываем <em class="blueline">resolve</em>, когда код выполнился успешно<span class="gr marg_0">&#10004;</span> <br>
+				Вызываем <em class="redline">reject</em>, если произошла ошибка<span class="gr marg_0">&#10004;</span> <br>
+				С помощью <em class="greenline">.then</em> и <em class="greenline">.catch</em>
+				обрабатываем результат выполнения <em>промиса</em><span class="gr marg_0">&#10004;</span> <br>
+				Если мы исправим <ins><span class="pr"><strong>true</strong></span></ins> на
+				<ins><span class="pr"><strong>false</strong></span></ins> в условии, то увидим, что у нас вывалился
+				<span class="rd"><strong>error</strong></span><span class="gr marg_0">&#10004;</span> <br><br>
+			</p>
+			<br>
+		</section>
+<!--/////////////////////////////////////////////////////////////////////////////-->
+<section>
+			<h3>5</h3>
+			<p>Что такое RegExp?</p>
+		</section>
+		<section class="bck">
+			<h3>Ответ:</h3>
+			<p><em class="marg_0">Регулярные выражения</em> <strong>RegExp</strong> - очень эффективны для извлечения информации из
+				текста.	Для этого нужно произвести поиск одного или нескольких совпадений по определённому шаблону.<br>
+				<em class="blueline marg_0">Регулярные выражения</em> - это шаблоны используемые для сопоставления последовательностей
+				символов в строках.<br>
+				В <span class="redline">JavaScript</span>, регулярные выражения также являются объектами.
+				Эти шаблоны используются в методах <em class="bl">.exec</em> и <em class="bl">.test</em> объекта
+				<em class="gr"><strong>RegExp</strong></em>, а также <em class="bl">.match</em>, <em class="bl">.replace</em>,
+				<em class="bl">.search</em>, и <em class="bl">.split</em> объекта <em class="gr"><strong>String</strong></em>.<br>
+
+				<div class="valid">
+						<span class="greenline">Пример валидации <em class="bl"><strong>email:</strong></em></span>
+						<code class="curl marg_1">
+							/^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i<br>
+						</code>
+				</div>
+
+			</p>
+			<br>
+		</section>
+<!--/////////////////////////////////////////////////////////////////////////////-->
+<section>
+			<h3>6</h3>
+			<p>Зачем нужен RegExp?</p>
+	</section>
+	<section class="bck reg_back">
+		<h3>Ответ:</h3>
+		<p><span class="lit">Как вы могли убедиться, области применения регулярных выражений разнообразны:</span>
+			<ul>
+				<li>
+					<span class="lit">Валидация данных (например, правильно ли заполнена строка <span class="bl"><strong>time</strong></span>)</span>
+				</li>
+				<li>
+					<span class="lit">Сбор данных (особенно <em class="bl">веб-скрапинг</em>, поиск страниц, содержащих определённый
+					набор слов в определённом порядке)</span>
+				</li>
+				<li>
+					<span class="lit">Обработка данных (преобразование сырых данных в нужный формат)</span>
+				</li>
+				<li>
+					<span class="lit">Парсинг (например, достать все <span class="or"><strong>GET</strong></span> параметры из
+						<span class="or"><strong>URL</strong></span> или текст внутри скобок)</span>
+				</li>
+				<li>
+					<span class="lit">Замена строк (даже во время написания кода в <span class="bl"><strong>IDE</strong></span>,
+						можно, например преобразовать	<span class="rd"><strong>Java</strong></span> или <span class="bl"><strong>C#</strong></span> класс в
+						соответствующий <span class="gr"><strong>JSON</strong></span> объект, заменить “<strong> ; </strong>”
+						на “<strong> , </strong>”, изменить размер букв, избегать объявление типа и т.д.)</span>
+				</li>
+				<li>
+					<span class="lit">Подсветка синтаксиса, переименование файла, анализ пакетов и многие другие задачи,
+						где нужно работать со строками (где данные не должны быть текстовыми).</span>
+				</li>
+			</ul>
+		</p>
+		<br>
+	</section>
+<!--/////////////////////////////////////////////////////////////////////////////-->
+	
+	<h3>Формат работы</h3>
+		<ul>
+			<li>html файл</li>
+		</ul>
+
+	</main>
+
+	<script src="app/main.js"></script>
+
+</body>
+
+</html>
