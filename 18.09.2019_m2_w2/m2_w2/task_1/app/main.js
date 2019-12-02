@@ -15,9 +15,6 @@ arrName = strProduct.split(' ');
 const nameLen = arrName.length,
       boughtLen = arrNumBought.length;
 
-      console.log(nameLen);
-      console.log(quantityProd);
-
       for(let i = 0; i < quantityProd; i++){
         //масив обьектов
         name = arrName[Math.floor(Math.random() * nameLen)];
@@ -27,7 +24,6 @@ const nameLen = arrName.length,
         let allPproduct = new Products(name, amountProd, boughtProd);
         shoppingList.push(allPproduct);
       }
-
 
 function sortMyArr(){
   //сортировка (ещё не купил/ уже купил)
@@ -75,4 +71,3 @@ inputMyArr();
 console.clear();
 sortMyArr();
 infoMyArr();
-
