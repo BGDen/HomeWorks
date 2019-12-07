@@ -17,7 +17,7 @@ let stlWidth = new ObjStyle('Width', 'width: 250px;'),
     stlBordRad = new ObjStyle('Background-color', 'background-color: lightgreen;'),
 
     sumArr = [],
-    sumStr = prompt('Введите строку содержаую любой текст: ', 'JavaScript');
+    sumStr = prompt('Введите строку содержащую любой текст: ', 'JavaScript');
 
 // debugger;
 
