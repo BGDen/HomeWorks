@@ -1,7 +1,7 @@
 export default class Group{
-  constructor(name = 'noname', quantity = 0, faculty = 'noname'){
+  constructor(name = 'noname', students = 0, faculty = 'noname'){
       this.name = name;
-      this.quantity = quantity;
+      this.students = students;
       this.faculty = faculty;
   }
 }
