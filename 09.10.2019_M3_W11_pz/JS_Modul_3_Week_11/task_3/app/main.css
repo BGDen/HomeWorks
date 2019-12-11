@@ -1,0 +1,33 @@
+body{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 221, 252, 0.781);
+}
+
+.main_hidden_text{
+  padding: 20px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(100, 148, 237, 0.658);
+  border-radius: 20px;
+  font-size: 18px;
+  font-size: 1.3em;
+}
+
+.star{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+  
+.aablock{
+  font-size: 0.9em;
+}
+
+.display_none{display: none;}
