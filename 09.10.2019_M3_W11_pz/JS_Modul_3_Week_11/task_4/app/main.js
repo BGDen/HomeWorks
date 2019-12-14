@@ -1,16 +1,7 @@
 
 const myLink = {
-  list: getObject('.left'),
-  right: getObject('.right')
-}
-
-function getObject(cssClass, all = false) {
-  if (all) {
-      return document.querySelectorAll(cssClass);
-  }else{
-      return document.querySelector(cssClass);
-  }
-}
+  list: document.querySelector('.left'),
+  right: document.querySelector('.right')}
 
 myLink.list.addEventListener('click', (ev) => {
   if(ev.target.tagName == 'LI'){
