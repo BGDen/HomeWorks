@@ -12,7 +12,7 @@ p{margin: 0;}
 
 .main_tab_list{
   width: 500px;
-  height: 270px;
+  height: 300px;
   display: grid;
   grid-template-columns: 100px 1fr;
   grid-template-rows: 1fr;
@@ -59,11 +59,26 @@ ul{
 }
   
 .aablock{
+  width: 207px;
+  height: 40px;
   font-size: 0.9em;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  margin-top: 10px;
+  margin: 15px 0 0 150px;
+}
+
+.R_Kip{
+  background: url(../img/Kipling_Signature.svg.png) no-repeat center;
+  background-size: contain;
+}
+.A_Push{
+  background: url(../img/Pushkin_Signature.svg.png) no-repeat center;
+  background-size: contain;
+}
+.M_Ler{
+  background: url(../img/Mikhail_Lermontov_Signature.svg.png) no-repeat center;
+  background-size: contain;
 }
 
 .checked{background-color: #4873A1;}
