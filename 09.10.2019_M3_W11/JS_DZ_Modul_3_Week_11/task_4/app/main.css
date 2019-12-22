@@ -1,0 +1,64 @@
+body{
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(17, 0, 255, 0.678), rgba(0, 247, 255, 0.678));
+}
+
+.main_lights{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.lights{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 15px;
+  background-color: rgb(50, 61, 61);
+}
+
+.stand{
+  width: 20px;
+  height: 150px;
+  background: #000;
+}
+
+.btn_light{
+  width: 100px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  font-size: 22px;
+}
+
+.circle_light{
+  margin: 10px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.circle_light::after{
+  content: "";
+  position: absolute;
+  width: 80px; 
+  height: 80px; 
+  margin: 0px 0px 0 0;
+  border-radius: 50%;
+  box-shadow: 0 -7px 0px 1px black;
+}
+
+.red{background-color: red;}
+.green{background-color: green;}
+.orange{background-color: orange;}
+.gray{background-color: #8A8A8A;}
