@@ -30,87 +30,129 @@
 		h1 {
 			animation: jingle 5s ease infinite alternate;
 		}
-
 		.bl {
 			color: rgb(19, 74, 177);
 		}
-
 		.rd {
 			color: crimson;
 		}
-
 		.lrd {
 			color: rgb(255, 46, 46);
 		}
-
 		.or {
 			color: rgb(255, 123, 0);
 		}
-
 		.yl {
 			color: rgb(233, 217, 0);
 		}
-
 		.gr {
-			color: rgb(5, 184, 5);
+			color: rgb(0, 165, 0);
 		}
-
 		.lgr {
 			color: rgba(38, 192, 0, 0.712);
 		}
-
 		.pr {
 			color: rgb(240, 16, 202);
 		}
-
+		.prsft{
+			color: rgba(128, 0, 106, 0.685);
+		}
 		.lbl {
 			color: rgb(0, 153, 255);
 		}
-
+		.blk{
+			color: rgb(0, 0, 0);
+		}
 		.rnd {
 			border-radius: 7px;
 			outline: none;
 			padding: 0 3px;
-
 		}
-
 		.vd {
 			border: 1px solid red;
 			border-radius: 15px;
 			outline: none;
 		}
-
 		.au {
 			border: 1px solid black;
 			border-radius: 20px;
 			height: 25px;
 			outline: none;
 		}
-
 		.bck {
 			background-color: rgb(241, 241, 241);
 			padding: 5px 10px 0 15px;
 		}
-
 		.marg_1 {
 			margin-left: 20px;
 		}
-
 		.marg_2 {
 			margin-left: 35px;
 		}
-
 		.marg_3 {
 			margin-left: 50px;
 		}
-
 		.marg_4 {
 			margin-left: 180px;
 		}
-
 		.marg_5 {
 			margin-left: 80px;
 		}
+		.marg_bt{
+			display: block;
+			margin-bottom: 10px;
+		}
+		.block_str{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			border: 1px solid black;
+			margin-bottom: 15px;
+			border-radius: 30%;
+			background: radial-gradient(rgb(255, 255, 255), rgba(120, 173, 253, 0.342));
+		}
+		.structure{
+			width: 500px;
+			height: 400px;
+			background: url('img/image.gif') no-repeat center;
+			background-size: contain;
+		}
+		.myBlock{
+			display: grid;
+			grid-template-rows: 1fr 2fr;
+			grid-template-columns: 1fr 2fr;
+			border: 1px solid black;
+		}
+		.myBlock > .hdr{
+			text-align: center;
+			background: rgba(255, 217, 0, 0.425);
+		}
+		.myBlock > div{
+			font-size: 1.1em;
+			padding: .5em;
+			text-align: start;
+			border: 1px solid black;
+			margin: 1px;
+		}
+		.wht{
+			background: rgb(255, 255, 255);
+			border-radius: 10px;
+		}
+		.lghtb{
+			background: rgba(192, 251, 255, 0.815);
+			border-radius: 10px;
+		}
+		.cod{
+			width: 20vw;
+			background-color:rgba(206, 209, 0, 0.418);
+			border-radius: 10px;
+			padding: 3px 0 3px 15px;
+		}
+		.cod_lng{
+			width: 40vw;
+		}
+		
 	</style>
 </head>
 
@@ -120,69 +162,154 @@
 <!--/////////////////////////////////////////////////////////////////////////////-->
 		<section>
 			<h3>1</h3>
-			<p>Что такое API и зачем он нужен?</p>
+			<p>В чем отличие <code>document</code> от <code>window</code>?</p>
 		</section>
 		<section class="bck">
 			<h3>Ответ:</h3>
-			<p>
+			<p>Объект <ins class="rd"><strong class="bl">window</strong></ins> соответствует окну браузера.<br>
+				Он содержит такие объекты, как <strong class="prsft">document</strong>, <strong class="prsft">navigator</strong>,
+				<strong class="prsft">frames</strong>, <strong class="prsft">history</strong>, <strong class="prsft">location</strong>,
+				<strong class="prsft">screen</strong> и <strong class="prsft">event</strong>.<br><br>
+
+				В свою очередь, объект <ins class="rd"><strong class="bl">document</strong></ins> может содержать объекты
+				<strong class="prsft">links</strong>, <strong class="prsft">anchor</strong>, <strong class="prsft">forms</strong>
+				и другие, а объект <strong class="prsft">forms</strong> – объект <strong class="prsft">elements</strong>.<br><br>
+
+				Когда пользователь загружает в окно браузера страницу <strong class="gr">HTML</strong>,
+				перечисленные выше объекты создаются и становятся доступными для сценариев.
+				Их состав и количество зависит от содержимого загруженной страницы.
+
+				<div class="block_str">
+					<div class="structure"></div>
+				</div>
+
+				<ins class="rd"><strong class="bl">window</strong></ins> – представляет собой сам браузер и <strong><ins class="rd"><span class="blk">считается</span> корневым</ins></strong> в иерархии объектов.<br><br>
+				
+				<ins class="rd"><strong class="bl">document</strong></ins> – представляет собой <strong><ins class="rd"><span class="blk">страницу</span> HTML</ins></strong>, загруженную в окно браузера.<br>
+				В зависимости от содержимого страницы этот объект может включать в себя другие объекты,
+				размещенные на странице – ссылки, локальные ссылки, формы и т. д.
+
 			</p>
 			<br>
 		</section>
 <!--/////////////////////////////////////////////////////////////////////////////-->
 <section>
 			<h3>2</h3>
-			<p>Зачем нужен pattern Observer?</p>
+			<p>За что отвечает свойство <code>outerHTML</code>?</p>
 		</section>
 		<section class="bck">
 			<h3>Ответ:</h3>
-			<p>
+			<p>Для изменения <em>структуры документа</em> испоьзуются методы, основанные на использовании
+				свойств элементов <strong class="rd">DOM</strong> – <strong class="bl">innerHTML</strong> и <strong class="bl">outerHTML</strong>.<br><br>
+				
+				<ins><strong class="bl">innerHTML</strong></ins> содержит <strong><span class="gr">HTML</span>–код</strong> между открывающим и закрывающим тегом. С помощью этого свойства
+				можно работать с кодом внутри тега, как со строкой – считывать и записывать.<br>
+				Однако для следующей группы элементов это свойство доступно только для чтения:<br>
+				<strong class="prsft">COL</strong>, <strong class="prsft">COLGROUP</strong>, <strong class="prsft">FRAMESET</strong>,
+				<strong class="prsft">HTML</strong>, <strong class="prsft">STYLE</strong>, <strong class="prsft">TABLE</strong>,
+				<strong class="prsft">TBODY</strong>, <strong class="prsft">TFOOT</strong>, <strong class="prsft">THEAD</strong>,
+				<strong class="prsft">TITLE</strong>, <strong class="prsft">TR</strong>.<br><br>
+
+				По определению свойство <ins class="rd"><span class="bl">innerHTML</span> не существует</ins> у элементов, которые не имеют
+				одновременно открывающего и закрывающего тега (например <code>&lt;br></code>).<br><br>
+				
+				<strong class="rd"><ins>Отличие</ins></strong> свойства <ins><strong class="bl">outerHTML</strong></ins> в том, что это свойство включает в себя <strong><span class="gr">HTML</span>–код</strong> между
+				открывающим и закрывающим тегом, а также открывающий и закрывающий тег этого элемента.
+				
+				Для следующих элементов это свойство доступно только при чтении:<br>
+				<strong class="prsft">CAPTION</strong>, <strong class="prsft">COL</strong>, <strong class="prsft">COLGROUP</strong>,
+				<strong class="prsft">FRAMESET</strong>, <strong class="prsft">HTML</strong>, <strong class="prsft">TBODY</strong>,
+				<strong class="prsft">TD</strong>, <strong class="prsft">TFOOT</strong>, <strong class="prsft">TH</strong>,
+				<strong class="prsft">THEAD</strong>, <strong class="prsft">TR</strong>.<br><br>
+				
+				Свойство <ins class="rd"><span class="bl">outerHTML</span> доступно</ins> для записи только после того, как весь документ будет загружен,
+				т.е. произойдет событие <span class="gr"><ins>window.onload</ins></span>.<br><br>
+
+				<div>
+						<span class="marg_bt"><strong><em class="blk">Для кода:</em></strong></span>
+
+						<div class="cod marg_3">
+								<code>
+									<span>&lt;div class='outer'></span><br>
+									<span class="marg_2">&lt;p class='inner'>&lt;/p><br>
+									&lt;/div><br>
+								</code>
+						</div><br>
+
+						<span class="marg_bt"><ins class="rd"><strong class="bl">innerHTML <strong class="gr">возвратит</strong>:</strong></ins></span>
+
+						<div class="cod marg_3">
+								<code class="curl">
+									&lt;p class='inner'>&lt;/p><br>
+								</code>
+						</div><br>
+
+						<span class="marg_bt"><ins class="rd"><strong class="bl">outerHTML <strong class="gr">возвратит</strong>:</strong></ins></span>
+
+						<div class="cod marg_3 cod_lng">
+								<code class="curl">
+									&lt;div class='outer'>&lt;p class='inner'>&lt;/p>&lt;/div>
+								</code><br>
+						</div><br>
+				</div>
+
 			</p>
-			<br>
+			
 		</section>
 <!--/////////////////////////////////////////////////////////////////////////////-->
 <section>
 			<h3>3</h3>
-			<p>Приведите пример Observer'а.</p>
+			<p>Какие методы есть у элемента <code>Element.classList</code>
+				 и какие действия можно с ними производить?</p>
 		</section>
 		<section class="bck">
 			<h3>Ответ:</h3>
-			<p>
+			<p><ins><strong>JavaScript</strong></ins> свойство <strong class="bl">classList</strong> объекта <strong class="rd">Element</strong> является свойством <em>только для чтения</em>,
+				которое возвращает живую коллекцию <strong class="gr">DOMTokenList</strong>, содержащую значение глобального
+				атрибута<br> <span class="bl">class</span> (классы элемента).
+
+				<div class="myBlock">
+					<div class="hdr">Синтаксис метода</div>
+					<div class="hdr">Описание</div>
+					<div class="wht"><span class="rd">add</span> ( <span class="bl">val</span> );<br>
+						<span class="rd">add</span> ( <span class="bl">val</span>, <span class="bl">val</span>, ...<span class="bl">val</span> );<br><br>
+						<span class="bl">val</span> - <span class="gr">String</span><br>
+					</div>
+					<div class="wht">Добавляет указанные значения класса. Если указанные классы уже существуют
+						   в атрибуте <span class="bl">class</span> элемента, то они игнорируются.</div>
+					<div class="lghtb"><span class="rd">remove</span> ( <span class="bl">val</span> );<br>
+						<span class="rd">remove</span> ( <span class="bl">val</span>, <span class="bl">val</span>, ...<span class="bl">val</span> );<br><br>
+						<span class="bl">val</span> - <span class="gr">String</span><br>
+					</div>
+					<div class="lghtb">Удаляет указанные значения класса. Удаление класса, который не существует,
+						   не вызывает ошибки.</div>
+					<div class="wht"><span class="rd">item</span> ( <span class="bl">val</span> );<br><br>
+						<span class="bl">val</span> - <span class="gr">Number</span><br>
+					</div>
+					<div class="wht">Возвращает значение класса по индексу в коллекции. Результат аналогичен
+						   вызову <span class="bl">сlassList[<span class="gr">Number</span>]</span>.</div>
+					<div class="lghtb"><span class="rd">toggle</span> ( <span class="bl">val</span> );<br>
+						<span class="rd">toggle</span> ( <span class="bl">val</span>, <span class="bl">force</span> );<br><br>
+						<span class="bl">val</span> - <span class="gr">String</span><br>
+						<span class="bl">force</span> - <span class="gr">Boolean</span><br>
+					</div>
+					<div class="lghtb">Когда присутствует только один аргумент переключает значение класса
+							 (если класс существует, то удаляет его и возвращает <span class="pr">false</span>, если нет, то добавит
+							 его и вернет <span class="pr">true</span>. Если второй аргумент имеет значение <span class="pr">true</span>, то указанное значение
+							 класса будет добавлено, а если значение <span class="pr">false</span>, удалено.</div>
+					<div class="wht"><span class="rd">contains</span> ( <span class="bl">val</span> );<br><br>
+						<span class="bl">val</span> - <span class="gr">String</span><br>
+					</div>
+					<div class="wht">Проверяет, существует ли указанное значение класса в атрибуте <span class="bl">class</span> элемента.</div>
+					<div class="lghtb"><span class="rd">replace</span> ( <span class="bl">oldClass</span>, <span class="bl">newClass</span> )<br><br>
+						<span class="bl">oldClass</span> - <span class="gr">String</span><br>
+							<span class="bl">newClass</span> - <span class="gr">String</span><br>
+					</div>
+					<div class="lghtb">Производит замену существующего класса новым классом.</div>
+				</div>
 			</p>
 			<br>
 		</section>
-<!--/////////////////////////////////////////////////////////////////////////////-->
-<section>
-			<h3>4</h3>
-			<p>Что такое Promise?</p>
-		</section>
-		<section class="bck">
-			<h3>Ответ:</h3>
-			<p>
-			</p>
-			<br>
-		</section>
-<!--/////////////////////////////////////////////////////////////////////////////-->
-<section>
-			<h3>5</h3>
-			<p>Что такое RegExp?</p>
-		</section>
-		<section class="bck">
-			<h3>Ответ:</h3>
-			<p>
-			</p>
-			<br>
-		</section>
-<!--/////////////////////////////////////////////////////////////////////////////-->
-<section>
-			<h3>6</h3>
-			<p>Зачем нужен RegExp?</p>
-	</section>
-	<section class="bck">
-		<h3>Ответ:</h3>
-		<p>
-		</p>
-		<br>
-	</section>
 <!--/////////////////////////////////////////////////////////////////////////////-->
 	
 	<h3>Формат работы</h3>
