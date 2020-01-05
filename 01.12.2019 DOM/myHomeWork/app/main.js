@@ -23,18 +23,16 @@ start.btn.addEventListener('click', () => {
 class DivMethod {
 
   constructor() {
-    this.container = document.querySelector('.conteiner');
+    this.container = document.querySelector('.container');
     this.box = document.querySelector('.canva');
     this.data = [];
     this.h2 = document.createElement('h2');
     this.createCoords();
     this.interval = setInterval(() => this.showRandomSquare(), 1000);
-    this.box.prepend(this.h2);
-    // prepend вставит содержимое this.h2 в начало выбранного элемента
+    this.box.prepend(this.h2); // prepend вставит содержимое this.h2 в начало выбранного элемента
   }
 
-  showRandomSquare(){
-    //метод отабражения квадратов
+  showRandomSquare(){ //метод отабражения квадратов
     let len = this.data.length;
     if(len == 0){
       this.theEnd();
@@ -45,59 +43,48 @@ class DivMethod {
     }
   }
 
-  getSquare(len){
-    // метод стилизации квадратов
+  getSquare(len){ // метод стилизации квадратов
     let sq = this.data.splice(this.randomizer(len), 1)[0];
     let div = document.createElement('div');
-        div.classList.toggle('square');
-        // toggle отобразит в div класс square
+        div.classList.toggle('square'); // toggle отобразит в div класс square
     let color = this.randomColor();
         div.style.backgroundColor = color;
         div.style.left = sq.x;
         div.style.top = sq.y;
         this.container.append(div);
-      return;
+        return;
   }
 
-  createCoords(){
-    // генерация координат
+  createCoords(){ // генерация координат
     for(let i = 0; i < 600; i = i + 60){
       for(let j = 0; j < 600; j = j + 60){
         let o = {
             x: i + 'px',
             y: j + 'px'
         }
-        this.data.push(o);
-        // получим массив обьектов x/y
+        this.data.push(o); // получим массив обьектов x/y
       }
     }
     return;
   }
 
-  theEnd(){
-    // метод вывода уведомления об окончании генерации квадратов
+  theEnd(){ // метод вывода уведомления об окончании генерации квадратов
     this.h2.textContent = 'it finished !';
     return clearInterval(this.interval);
   }
 
-  randomizer(max){
-    // метод опредиления рандомного диапазона от 0 до max
+  randomizer(max){ // метод опредиления рандомного диапазона от 0 до max
     return Math.floor(Math.random() * (max));
   }
 
-  randomColor(){
-    // метод получения рандомного оттенка rbg
-    return `rbg(${this.randomizer(255)},${this.randomizer(255)},${this.randomizer(255)})`;
+  randomColor(){ // метод получения рандомного оттенка rgb
+    return `rgb(${this.randomizer(255)},${this.randomizer(255)},${this.randomizer(255)})`;
   }
 
-  delete(){
-    // метод удаления/обнуления
-    this.box.removeChild(this.h2);
-    // удаление заголовка второго уровня
-    clearInterval(this.interval);
-    // обнуление интервала времени
-    this.container.innerHTML = '';
-    // очистка содержимого элемента
+  delete(){ // метод удаления/обнуления
+    this.box.removeChild(this.h2); // удаление заголовка второго уровня
+    clearInterval(this.interval); // обнуление интервала времени
+    this.container.innerHTML = ''; // очистка содержимого элемента
     return;
   }
 }
@@ -156,8 +143,8 @@ class CanvasMethod{
     return Math.floor(Math.random() * (max));
   }
 
-  randomColor(){ // метод получения рандомного оттенка rbg
-    return `rbg(${this.randomizer(255)},${this.randomizer(255)},${this.randomizer(255)})`;
+  randomColor(){ // метод получения рандомного оттенка rgb
+    return `rgb(${this.randomizer(255)},${this.randomizer(255)},${this.randomizer(255)})`;
   }
 
   delete(){ // метод удаления/обнуления
