@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru-UA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Sotula Nick">
+    <meta name="description" content="Step Dnipro HomeWork Web Course->JS">
+    <title>DZ-JS-26</title>
+    <style>
+        body {
+            padding: 15px 20px;
+            font-family: sans-serif;
+        }
+        
+        section {
+            margin: 15px;
+            border-left: 15px solid rgb(166, 194, 166);
+            padding-left: 15px;
+        }
+        
+        code {
+            font-size: 150%;
+            text-shadow: 1px 1px 5px dimgrey;
+        }
+        
+        main {
+            width: 600px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+
+        h3{
+            font-size: 150%;
+        }
+        
+        .examples{
+            border-collapse: collapse;
+        }
+        
+        .examples td{
+            border: 1px solid green;
+            padding: 7px;
+        }
+        
+        pre{
+            font-family: cursive;
+        }
+
+        h4{
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        h4+p{
+            margin-top: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Домашнее задание №26</h1>
+        <section>
+            <h3>1 - Плитка</h3>
+            <p>Напишите приложение, которое раз в секунду добавляет на экран квадрат случайного цвета. Выделите на экране область размером 600 на 600. Разделите область на квадраты по 60 пикселей. Раз в секунду в одной из областей(случайно) появляется квадрат случайного цвета. Когда все области(100 квадратов - 100 секунд) заполнятся - закончите выполнение и выведите текст "Заполнение завершено" в заголовок второго уровня. Каждый новый квадрат должен ложиться в отдельное, незанятое другим квадратом, место.</p>
+            <h4>Входные данные:</h4>
+            <p>Нет</p>
+            <h4>Выходные данные:</h4>
+            <p>Плитка</p>
+        </section>
+        <section>
+            <h3>2 - Математический тренажер</h3>
+            <p>Напишите приложение, которое помогает пользвателю натренироваться в простых математических операциях(сложение/вычитание/деление для чисел от 10 до 100, и умножение для чисел от 2 до 30). При заходе на страницу пользователю генерируется математическое выражение. Пользователь должен ввести результат в поле ввода и нажать на кнопку "Проверить". Если все верно - генерируется новое выражение, а пользователь получает сообщение "Все верно". 
+            </p>
+            <h4>Входные данные:</h4>
+            <p>Число - решение математического выражения</p>
+            <h4>Выходные данные:</h4>
+            <p>Строка - "A операция В = " </p>
+            <p>Строка - "Все верно" в случае правильного решения</p>
+            <p>Строка - "Подумай еще" в случае неправильного решения</p>
+            <h4>Примеры:</h4>
+            <details>
+                <summary>Развернуть</summary>
+
+                <table class="examples">
+                    <tr>
+                        <td>#</td>
+                        <td>IN</td>
+                        <td>OUT</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>72</td>
+                        <td>6 * 12 = <br>Все правильно</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>25</td>
+                        <td>7 - 9 = <br>Подумай еще</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Кактус</td>
+                        <td>7 / 14 = <br>Подумай еще</td>
+                    </tr>
+                </table>
+            </details>
+        </section>
+ <section>
+            <h3>3 - Опять Саймон.</h3>
+            <p>Саймон написал код. Саймон уверен, что код в порядке. Но код не работает. Исправь ошибки, допущенные Саймоном.</p>
+            <h4>Входные данные:</h4>
+            <p>Число - количество черных блоков</p>
+            <p>Строка</p>
+            <h4>Выходные данные:</h4>
+            <p>Блоки</p>
+            <h4>Код Саймона:</h4>
+            <details>
+                    <summary>Развернуть код</summary>
+            <pre>
+ &#60;body&#62;
+	 &#60;input type="number" class="in"&#62;
+	 &#60;div class="blocs"&#62; &#60;/div&#62;
+
+	 &#60;script&#62;
+		document.querySelector('.in').addEventListener('keyup', function(ev){
+			let blocs = document.querySelectorAll('.blocs'),
+					count = parseInt(ev.target.innerHTML);
+
+			while(blocs.firstChild){
+				blocs.removeChild(blocs.firstChild);
+			}													
+
+			while(count++){
+				blocs.appendChild(document.createElement('div'));
+			}																						 
+		});
+	&#60;/script&#62;
+&#60;/body&#62;
+            </pre>
+            </details>
+        </section>
+        <h3>Формат работы</h3>
+        <ul>
+            <li>Файлы  с первым заданием - <ins>plita.html</ins>  <ins>plitaApp.js</ins></li>
+            <li>Файлы со вторым заданием - <ins>mathTrain.html</ins>  <ins>mathTrainApp.js</ins></li>
+            <li>Файлы со третим заданием - <ins>simon.html</ins>  <ins>simonApp.js</ins></li>
+        </ul>
+    </main>
+</body>
+
+</html>
