@@ -3,7 +3,7 @@ class myMath {
   constructor(){
     this.operand = ['*', '/', '-', '+'];
     this.container = document.querySelector('.container');
-    this.iput = document.querySelector('.input-number');
+    this.input = document.querySelector('.input-number');
     this.btn = document.querySelector('.btnAdd');
     this.result = this.getMath(); 
   }
@@ -21,7 +21,7 @@ class myMath {
      }
 
      values.mathOperation = `${values.firstNum}${values.oper}${values.secondNum}`;
-     this.container.innerHTML = `<span>${values.mathOperation}</span> = <span class = 'ansv'></span>`;
+     this.container.innerHTML = `<span>${values.mathOperation}</span> = <span class = 'answ'></span>`;
      return +eval(values.mathOperation).toFixed(2); // eval выполнит выражение values.mathOperation, toFixed округлит результат до 2х знаков
   }
   
@@ -31,12 +31,15 @@ class myMath {
 
   checkAnswer(answ){
     document.querySelector('.answ').innerText = answ;
+
     if(answ == this.result){
-      let d = document.querySelector('h2');
+      let d = document.createElement('h2');
           d.innerText = 'Ответ правельный!';
+          this.container.append(d);
+
     }else{
-      if(this.container.contains(document.querySelector('h2'))){
-        return;
+      if(this.container.contains(document.createElement('h2'))){
+         return;
       }else{
         let d = document.createElement('h2');
             d.textContent = 'Подумай ещё!';
