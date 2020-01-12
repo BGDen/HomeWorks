@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <style>
+    body{
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      user-select: none;
+      background:rgba(95, 158, 160, 0.521);
+    }
+    .cont{
+      width: 50vw;
+      height: 550px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      border: 1px solid gray;
+      background:rgba(255, 127, 80, 0.801);
+    }
+    .blocs div{
+      width: 50px;
+      height: 50px;
+      background-color:black;
+      margin: 1px;
+    }
+    .blocs{
+      width: 92%;
+      height: 70%;
+      padding: 5px;
+      display: flex;
+      flex-wrap: wrap;
+      border: 1px solid black;
+      overflow: auto;
+      background: white;
+    }
+  </style>
+
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="cont">
+    <input type="number" class="in">
+    <div class="blocs"> </div>
+  </div>
+
+  <script>
+   document.querySelector('.in').addEventListener('keyup', function(ev){
+     let blocs = document.querySelector('.blocs'), // All лишнее
+         count = parseInt(ev.target.value); // меняем innerHTML на value, вызовом события будет введённое значение
+
+     while(blocs.firstChild){
+       blocs.removeChild(blocs.firstChild);
+     }													
+
+     while((count > 0) && (count--)){ // добавляем диапазон (от 0 до count) и меняем условие while(++ => --)
+       blocs.appendChild(document.createElement('div'));
+     }																						 
+   });
+  </script>
+ </body>
+</html>

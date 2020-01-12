@@ -8,7 +8,7 @@ class myMath {
     this.result = this.getMath(); 
   }
 
-  getMath(){
+  getMath(){ // метод отображения математического выражения
      let values = {
        oper: this.operand[this.randomizer(this.operand.length)],
        firstNum: this.randomizer(100, 10),
@@ -20,7 +20,7 @@ class myMath {
        values.secondNum = this.randomizer(30, 2);
      }
 
-     values.mathOperation = `${values.firstNum}${values.oper}${values.secondNum}`;
+     values.mathOperation = `${values.firstNum} ${values.oper} ${values.secondNum}`;
      this.container.innerHTML = `<span>${values.mathOperation}</span> = <span class = 'answ'></span>`;
      return +eval(values.mathOperation).toFixed(2); // eval выполнит выражение values.mathOperation, toFixed округлит результат до 2х знаков
   }
@@ -29,16 +29,16 @@ class myMath {
     return Math.floor(Math.random() * (max - min) + min);
   }
 
-  checkAnswer(answ){
-    document.querySelector('.answ').innerText = answ;
+  checkAnswer(answ){ // метод отображения результата выражения
+    document.querySelector('.answ').innerText = answ; // результат математического выражения
 
     if(answ == this.result){
       let d = document.createElement('h2');
           d.innerText = 'Ответ правельный!';
-          this.container.append(d);
+          this.container.append(d); // вставит содержимое переменной в конец parent
 
     }else{
-      if(this.container.contains(document.createElement('h2'))){
+      if(this.container.contains(document.createElement('h2'))){ // contains вернёт boolean true/false принадлежности child к parent
          return;
       }else{
         let d = document.createElement('h2');
