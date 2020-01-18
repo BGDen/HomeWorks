@@ -4,7 +4,7 @@ class Marker {
       this.ink = ink;
   }
 
-  print(text){
+  print(text){ // метод отображения напечатанной строки
 
       let pos = 0;
 
@@ -34,13 +34,19 @@ class Marker {
     }
 }
 
+class ZapMarker extends Marker{
+  refill(addInk){
+      (addInk > 0) ? this.ink +=addInk : false;
+  }
+}
+
 const myLink = {
   btnHideShow: document.querySelector('.btn_del')
 }
 
 myLink.btnHideShow.addEventListener('click', (ev) => {
   if(ev.type == 'click'){
-  document.querySelector('p').parentNode.removeChild(document.querySelector('p'));
+  document.querySelector('p').parentNode.removeChild(document.querySelector('p')); // удаление напечатанной строки
   }
 });
 

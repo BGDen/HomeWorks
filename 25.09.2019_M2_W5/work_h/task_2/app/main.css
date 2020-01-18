@@ -1,0 +1,30 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  user-select: none;
+  overflow: auto;
+  background: radial-gradient(rgb(251, 219, 255), rgba(255, 0, 234, 0.658));
+}
+input{
+  height: 25px;
+  margin-bottom: 7px;
+  outline: none;
+}
+p, span{
+  font-size: 1em;
+  padding: 3px 10px;
+  margin: 0;
+  border-radius: 10px;
+  background: rgba(164, 243, 213, 0.589);
+}
+span{
+  margin-bottom: 10px;
+}
