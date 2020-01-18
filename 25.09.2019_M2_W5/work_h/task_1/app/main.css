@@ -1,0 +1,41 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  background: radial-gradient(rgb(255, 254, 219), rgba(255, 238, 0, 0.836));
+}
+.myBlock{
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background: wheat;
+}
+input{
+  outline: none;
+  background: rgb(110, 196, 247);
+}
+.stl{
+  height: 35px;
+  margin: 5px;
+  font-size: 1.5em;
+}
+.btn_del{
+  outline: none;
+  background: rgb(247, 157, 157);
+}
+p{
+  font-size: 2em;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background: rgba(164, 243, 213, 0.589);
+}
