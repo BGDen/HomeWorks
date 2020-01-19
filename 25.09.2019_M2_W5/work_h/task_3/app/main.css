@@ -1,0 +1,15 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  user-select: none;
+  overflow: auto;
+  background: radial-gradient(rgba(54, 74, 190, 0.849), rgb(0, 99, 25));
+}
