@@ -19,10 +19,12 @@ export class View{
 
   clickBtnAdd(){
     if(this.links.text.value){
-      this.links.container.innerHTML += `${this.links.text.value}<br>`;
-      this.controller.saveData(this.links.text.value);
+      let elem = document.createElement('div')
+          elem.innerText=`${this.links.text.value}`;
+          this.links.container.prepend(elem);
+          this.controller.saveData(this.links.text.value);
 
-      this.links.text.value = '';
+          this.links.text.value = '';
     }
   }
 
